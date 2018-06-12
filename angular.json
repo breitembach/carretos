@@ -27,9 +27,24 @@
               "src/assets"
             ],
             "styles": [
+              {
+                "input": "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+              },
+              // "../node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
+              
             ],
-            "scripts": []
+            "scripts": [
+              // "../node_modules/jquery/dist/jquery.min.js",
+              // "../node_modules/bootstrap/dist/js/bootstrap.min.js",
+              // "../node_modules/popper.js/dist/umd/popper.min.js",
+              "src/assets/js/main.ts"
+            ]
+            // "stylePreprocessorOptions": {
+            //   "includePaths": [
+            //     "src/assets/css/test.scss"
+            //   ]
+            // }
           },
           "configurations": {
             "production": {
@@ -76,6 +91,9 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
+              {
+                "input": "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+              },
               "src/styles.scss"
             ],
             "scripts": [],

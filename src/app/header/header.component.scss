@@ -1,8 +1,22 @@
 // @import '_variables';
-@import "./src/assets/css/_variables";
-nav {
-    background-color : $color-main;
-}
-.container-header {
-    background: $color-main;
+@import "~src/assets/css/_variables";
+.header-container {
+  background: $color-main;
+
+  .navbar-brand {
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  .nav-item {
+    &:hover {
+      background: darken($color: $color-main, $amount: 4)
+    }
+    .nav-link {
+      text-transform: uppercase;
+      color: $color-white;
+      // font-weight: 500;
+    }
+  }
 }

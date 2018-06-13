@@ -1,15 +1,10 @@
-
-// @import "./src/assets/css/_variables";
-// @import "./src/assets/css/_buttons";
-body {
-  margin: 0;
-}
+@import "~src/assets/css/_variables";
 
 .title-third {
   display: inline-block;
   margin-bottom: -2px;
   color: white;
-  font-weight: bold;
+  font-weight: 500;
   // font-family: "Roboto",sans-serif;
   text-transform: uppercase;
   &:after {
@@ -18,10 +13,9 @@ body {
     width: 100%;
     transition: all ease 2s;
     height: 5px;
-    background: #ff5900;
+    background: $color-main;
     z-index: 9;
     bottom: 0;
     display: block;
   }
 }
-

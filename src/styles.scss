@@ -1,27 +1,5 @@
 
 // @import "./src/assets/css/_variables";
 // @import "./src/assets/css/_buttons";
-body {
-  margin: 0;
-}
 
-.title-third {
-  display: inline-block;
-  margin-bottom: -2px;
-  color: white;
-  font-weight: bold;
-  // font-family: "Roboto",sans-serif;
-  text-transform: uppercase;
-  &:after {
-    content: '';
-    position: relative;
-    width: 100%;
-    transition: all ease 2s;
-    height: 5px;
-    background: #ff5900;
-    z-index: 9;
-    bottom: 0;
-    display: block;
-  }
-}
 

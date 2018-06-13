@@ -1,0 +1,42 @@
+@import "~src/assets/css/_variables";
+
+.main-container-login {
+  background: $color-main;
+  color: white;
+  padding: 74px;
+  padding-top: 10px;
+  padding-bottom: 171px;
+  h3 {
+    color: #fff;
+  }
+  .btn-main {
+    text-transform: uppercase;
+  }
+  input {
+    background: transparent;
+    color: #dadada;
+    &:focus {
+      border-color: white;
+      border-width: 1px;
+      box-shadow: 0 0 0 0.2rem rgba(252, 253, 255, 0.15) ;
+
+    }
+  }
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #dadada;
+    opacity: 1; /* Firefox */
+  }
+
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: #dadada;
+  }
+
+  ::-ms-input-placeholder { /* Microsoft Edge */
+      color: #dadada;
+  }
+}
+.input-group-text {
+  background: transparent;
+  color: white;
+  font-size: 33px;
+}

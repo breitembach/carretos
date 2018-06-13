@@ -1,18 +1,44 @@
-
-<!-- <nav-bar></nav-bar> -->
-
-<mat-grid-list cols="1" rowHeight="2:1" class="container-header">
-    <!-- <mat-grid-tile>1</mat-grid-tile>
-    <mat-grid-tile>2</mat-grid-tile>
-    <mat-grid-tile>3</mat-grid-tile>
-    <mat-grid-tile>4</mat-grid-tile> -->
-   <mat-grid-tile-header>
-     TESTE
-   </mat-grid-tile-header>
-    <div class="container">
-      dasdasds
+<header class="header-container">
+  <!-- <nav class="container">
+    <img src="../../assets/imgs/logo.png" alt="logo">
+  </nav> -->
+  <nav class="navbar navbar-expand-lg navbar-light container">
+    <a class="navbar-brand" href="#">
+      <img src="../../assets/imgs/logo.png" alt="logo">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Encontre Carretos <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Encontre usuários</a>
+        </li>
+       
+        
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="Pesquisar" placeholder="Comece a pesquisar..." aria-label="Pesquisar">
+        <button class="btn btn-outline-success my-2 my-sm-0 btn-main  mr-md-4" type="submit">Pesquisar</button>
+      </form>
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Cadastre-se
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Sou usuário</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Sou fretista</a>
+          </div>
+        </li>
+        <button class="btn btn-outline-success my-2 my-sm-0 btn-main" type="submit">Entrar</button>
+    </ul>
     </div>
-    <button class="btn btn-primary">Test Button</button>
-    <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
-
-</mat-grid-list>
+  </nav>
+</header>

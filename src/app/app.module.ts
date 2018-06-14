@@ -50,14 +50,16 @@ import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
 import { LoginComponent } from './login/login.component';
-import { FretistasComponent } from './fretistas/fretistas.component';
+import { ListFreightComponent } from './list-freight/list-freight.component';
+import { ListUserComponent } from './list-user/list-user.component';
 import { UserComponent } from './user/user.component';
 import { FreightComponent } from './freight/freight.component';
 
 import { UserBackendService } from './user/user-backend.service';
 import { FreightBackendService } from './freight/freight-backend.service';
+import { ListFreightBackendService } from './list-freight/list-freight-backend.service';
+import { ListUserBackendService } from './list-user/list-user-backend.service';
 import { User } from './shared/model/user.model';
-import { RegisterFretistaComponent } from './register-fretista/register-fretista.component';
 
 @NgModule({
   declarations: [
@@ -65,10 +67,10 @@ import { RegisterFretistaComponent } from './register-fretista/register-fretista
     HeaderComponent,
     FooterComponent,
     LoginComponent,
-    FretistasComponent,
+    ListFreightComponent,
     UserComponent,
     FreightComponent,
-    RegisterFretistaComponent
+    ListUserComponent
   ],
   imports: [
     RouterModule.forRoot(ROUTES),
@@ -117,7 +119,9 @@ import { RegisterFretistaComponent } from './register-fretista/register-fretista
   ],
   providers: [
     UserBackendService,
-    FreightBackendService
+    FreightBackendService,
+    ListFreightBackendService,
+    ListUserBackendService
   ],
   bootstrap: [AppComponent]
 })

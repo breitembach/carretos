@@ -1,0 +1,30 @@
+@import "~src/assets/css/_variables";
+
+.card-wrapper {
+  .card-user-header {
+    margin-top: 10px;
+    margin-bottom: 1rem;
+  }
+  .card-user-image {
+
+  }
+  .card-user-name {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .card-user-occupation {
+    font-style: italic;
+  }
+  .card-user-stars {
+    img {
+      width: 17px;
+    }
+  }
+  .img-fluid{
+    width: 50vh;
+  }
+  .regionServed{
+    text-align: center;
+    text-transform: uppercase;
+  }
+}

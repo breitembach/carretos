@@ -4,8 +4,8 @@
       <h1 class="title-main">Recentes adicionados</h1>
     </div>
       <!-- CARD WRAPPER -->
-      <div class="col-md-4">
-        <div class="card-wrapper shadow p-2 mb-5 rounded">
+      <div class="col-md-4" *ngFor="let freight of freights">
+        <div class="card-wrapper shadow p-2 mb-5 rounded" >
         <div class="row card-user-header">
           <div class="col-sm-3">
             <div class="card-user-image">
@@ -14,10 +14,13 @@
           </div>
           <div class="col-sm-9">
             <div class="card-user-name">
-              Lucas Breitembach
+              {{freight.nameCompany}}
             </div>
             <div class="card-user-occupation">
-              Fretista
+              Telefone: <b>{{freight.telephone}}</b>
+            </div>
+            <div class="card-user-occupation">
+              E-mail: <b>{{freight.email}}</b>
             </div>
             <div class="card-user-stars">
               <img src="assets/imgs/icons/star.png" alt="avaliações">
@@ -29,8 +32,15 @@
           </div>
         </div>
           <div class="col-sm-12">
-              <img src="assets/imgs/Carreto2.png" class="img-fluid" alt="Carro">
+            <img src="assets/imgs/Carreto2.png" class="img-fluid" alt="Carro">
+         </div>
+         <div class="col-sm-12 regionServed">
+           <b>Região atendida: {{freight.regionServed}}</b>
+         </div>
+         <div class="col-sm-12">
+              {{freight.description}}
           </div>
+          
         </div>
       </div>
       <!-- CARD WRAPPER END -->

@@ -41,9 +41,14 @@ export class FreightComponent implements OnInit {
             .subscribe(
                 result => {
                     if (result) {
+                        this.redirect('/');
                         console.log('Freight criado com sucesso!');
                     }
                 }
             );
+    }
+
+    public redirect = (route: string): void => {
+        this._router.navigate([route]);
     }
 }

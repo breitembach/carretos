@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {MatButtonModule, MatCheckboxModule, MatMenuModule, MatToolbarModule, MatSidenavModule,
    MatIconModule, MatListModule, MatGridListModule, MatCardModule, 
-   MatTableModule, MatPaginatorModule, MatSortModule, } from '@angular/material';
+   MatTableModule, MatPaginatorModule, MatSortModule, MatFormFieldModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -12,6 +12,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TableComponent } from './table/table.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TableComponent } from './table/table.component';
     FooterComponent,
     NavBarComponent,
     DashboardComponent,
-    TableComponent
+    TableComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +40,7 @@ import { TableComponent } from './table/table.component';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,21 @@
+@import "~src/assets/css/_variables";
+
+.title-third {
+  display: inline-block;
+  margin-bottom: -2px;
+  color: white;
+  font-weight: 500;
+  // font-family: "Roboto",sans-serif;
+  text-transform: uppercase;
+  &:after {
+    content: '';
+    position: relative;
+    width: 100%;
+    transition: all ease 2s;
+    height: 5px;
+    background: $color-main;
+    z-index: 9;
+    bottom: 0;
+    display: block;
+  }
+}

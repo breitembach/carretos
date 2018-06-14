@@ -50,6 +50,11 @@
                             <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
                         </mat-form-field>
                     </div>
+                    <div class="user-single-field">
+                        <mat-form-field>
+                            <textarea name="description" matInput placeholder="Descrição" [(ngModel)]="user.description"></textarea>
+                        </mat-form-field>
+                    </div>
                     <div class="user-buttons">
                         <button (click)="saveUser()" mat-button class="user-save-button">
                             <label>SALVAR</label>

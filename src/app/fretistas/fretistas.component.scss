@@ -1,6 +1,10 @@
 @import "~src/assets/css/_variables";
 
 .card-wrapper {
+  .card-user-header {
+    margin-top: 10px;
+    margin-bottom: 1rem;
+  }
   .card-user-image {
 
   }
@@ -13,7 +17,7 @@
   }
   .card-user-stars {
     img {
-      width: 28px;
+      width: 17px;
     }
   }
 }

@@ -1,0 +1,87 @@
+.freight-container{
+    width: 100vw;
+    height: 100vh;
+}
+
+.freight-title{
+    width: 100%;
+    height: 50px;
+    margin-top: 15px;
+    
+}
+.freight-content-label{
+    width: 49%;
+    background-color: #34373d;
+    color: #fff;
+    font-weight: bold;
+    height: 13vh;
+    border-radius: 4vh 4vh 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+.large{
+    font-size: 4rem;
+    margin-right: 58vh;
+    margin-top: 2vh;
+}
+
+.freight-label{
+    font-size: 6vh;
+    margin-top: 3vh;
+    margin-left: 4vh;
+    position: absolute;
+}
+
+.freight-single-field{
+    display: flex;
+    width: 100%;
+}
+
+.freight-fields{
+    margin-top: 15px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+
+/*Cards*/
+.cardfreight{
+    width:  70%;
+    height: 20%;
+    justify-content: center;
+    border: 1px solid #34373d;
+    display: inline;
+    position: relative;
+    padding: 15px 13px 2px 17px;
+    border-radius: 2px;
+
+}
+.cardfreightContainer{
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    margin-top: 2vh; 
+}
+.freight-buttons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.freight-buttons-button{
+    margin-right: 10px;
+}
+
+.freight-save-button {
+    width: 20%;
+    background-color: #f38221;
+    border-radius: 10px;
+    height: 20%;
+    color: white;
+}

@@ -32,10 +32,9 @@ export class UserComponent implements OnInit {
             city: this.user.city,
             district: this.user.district,
             telephone: this.user.telephone,
-            zipcode: this.user.zipcode
+            zipcode: this.user.zipcode,
+            description: this.user.description
         };
-        console.log('request');
-        console.log(request);
         this._createUser(request);
     }
 
@@ -44,9 +43,13 @@ export class UserComponent implements OnInit {
             .subscribe(
                 result => {
                     if (result) {
+                        this.redirect('/');
                         console.log('Usuario criado com sucesso!');
                     }
                 }
             );
+    }
+    public redirect = (route: string): void => {
+        this._router.navigate([route]);
     }
 }

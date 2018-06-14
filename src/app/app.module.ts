@@ -48,28 +48,27 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { TableComponent } from './table/table.component';
 import { LoginComponent } from './login/login.component';
 import { FretistasComponent } from './fretistas/fretistas.component';
 import { UserComponent } from './user/user.component';
+import { FreightComponent } from './freight/freight.component';
 
 import { UserBackendService } from './user/user-backend.service';
+import { FreightBackendService } from './freight/freight-backend.service';
 import { User } from './shared/model/user.model';
+import { RegisterFretistaComponent } from './register-fretista/register-fretista.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    NavBarComponent,
-    DashboardComponent,
-    TableComponent,
     LoginComponent,
     FretistasComponent,
-    UserComponent
+    UserComponent,
+    FreightComponent,
+    RegisterFretistaComponent
   ],
   imports: [
     RouterModule.forRoot(ROUTES),
@@ -118,6 +117,7 @@ import { User } from './shared/model/user.model';
   ],
   providers: [
     UserBackendService,
+    FreightBackendService
   ],
   bootstrap: [AppComponent]
 })

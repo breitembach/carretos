@@ -7,6 +7,7 @@ export interface User {
     city?: string;
     zipcode?: string;
     telephone?: string;
+    description?: string;
 }
 
 export class UserObject implements User { }

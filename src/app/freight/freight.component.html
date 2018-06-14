@@ -1,0 +1,52 @@
+<div class="freight-container">
+    <div class="freight-title horizontally-centralized">
+        <div class="freight-content-label">
+            <i class="large material-icons">add_circle_outline</i>
+            <label class="freight-label">Cadastro de Fretista</label>
+        </div>
+    </div>
+    <form #f="ngForm">
+        <div class="freight-fields">
+            <div class="cardfreightContainer">
+                <div class="cardfreight">
+                    <div class="freight-single-field">
+                        <mat-form-field>
+                            <input name="nameCompany" matInput placeholder="Nome da Empresa:" [(ngModel)]="freight.nameCompany" ng-minlength="2" required>
+                        </mat-form-field>
+                    </div>
+                    <div class="freight-single-field">
+                        <mat-form-field class="mat-block" flex-gt-xs>
+                            <input name="regionServed" matInput placeholder="Região atendida:" [(ngModel)]="freight.regionServed" ng-minlength="2" required>
+                        </mat-form-field>
+                    </div>
+                    <div class="freight-single-field">
+                        <mat-form-field class="mat-block" flex-gt-xs>
+                            <input name="telephone" matInput placeholder="Telefone:" [(ngModel)]="freight.telephone" ng-minlength="2" required>
+                        </mat-form-field>
+                    </div>
+                    <div class="freight-single-field">
+                        <mat-form-field>
+                            <textarea name="description" matInput placeholder="Descrição" [(ngModel)]="freight.description"></textarea>
+                        </mat-form-field>
+                    </div>
+                    <div class="freight-single-field">
+                        <mat-form-field class="mat-block" flex-gt-xs>
+                            <input name="email" matInput placeholder="E-mail:" [(ngModel)]="freight.email" ng-minlength="2" required>
+                        </mat-form-field>
+                    </div>
+                    <div class="freight-single-field">
+                        <mat-form-field>
+                            <input matInput placeholder="Senha" name="password" [(ngModel)]="freight.password" [type]="hide ? 'password' : 'text'">
+                            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                        </mat-form-field>
+                    </div>
+                    <div class="freight-buttons">
+                        <button (click)="savefreight()" mat-button class="freight-save-button">
+                            <label>SALVAR</label>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-  public redirect = (): void => {
-    this._router.navigate(['/user']);
+  public redirect = (route: string): void => {
+    this._router.navigate([route]);
   }
 }

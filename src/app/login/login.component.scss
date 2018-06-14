@@ -1,13 +1,23 @@
 @import "~src/assets/css/_variables";
 
 .main-container-login {
-  background: $color-main;
+  background-image: linear-gradient(to bottom,$color-main,$color-secondary);
   color: white;
   padding: 74px;
   padding-top: 10px;
   padding-bottom: 171px;
+  // .bg {
+  //   background-image: url("src/assets/imgs/truck.svg");
+  //   background-repeat: no-repeat;
+  //   background-position-y: center;
+  //   opacity: .4;
+  // }
   h3 {
     color: #fff;
+  }
+  
+  .input-group-text {
+    width: 57px;
   }
   .btn-main {
     text-transform: uppercase;

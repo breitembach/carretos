@@ -25,7 +25,6 @@
             "assets": [
               "src/favicon.ico",
               "src/assets"
-              // { "glob": "**/*", "input": "src/assets/css", "output": "/assets/css" }
             ],
             "styles": [
               {
@@ -44,11 +43,6 @@
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
               "src/assets/js/plugins-config.js"
             ]
-            // "stylePreprocessorOptions": {
-            //   "includePaths": [
-            //     "src/assets/css/test.scss"
-            //   ]
-            // }
           },
           "configurations": {
             "production": {

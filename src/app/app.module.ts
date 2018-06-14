@@ -18,6 +18,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { TableComponent } from './table/table.component';
 import { LoginComponent } from './login/login.component';
 import { FretistasComponent } from './fretistas/fretistas.component';
+import { RegisterFretistaComponent } from './register-fretista/register-fretista.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FretistasComponent } from './fretistas/fretistas.component';
     DashboardComponent,
     TableComponent,
     LoginComponent,
-    FretistasComponent
+    FretistasComponent,
+    RegisterFretistaComponent
   ],
   imports: [
     RouterModule.forRoot(ROUTES),

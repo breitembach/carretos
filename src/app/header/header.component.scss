@@ -19,4 +19,17 @@
       // font-weight: 500;
     }
   }
+  .navbar-nav {
+    .dropdown-item.active, .dropdown-item:active {
+      background: $color-secondary;
+      
+    }
+  }
+  input {
+    padding-right: 30px;
+    background-image: url('src/assets/imgs/icons/search.svg');
+    background-repeat: no-repeat;
+    background-position: center right 10px;
+    background-size: 20px;
+  }
 }

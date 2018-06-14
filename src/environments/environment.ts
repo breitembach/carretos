@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  carretosApiUrl: 'localhost:3000/'
+  carretosApiUrl: 'http://localhost:3000/'
 };
 
 /*

@@ -1,0 +1,62 @@
+<div class="user-container">
+    <div class="user-title horizontally-centralized">
+        <div class="user-content-label">
+            <i class="large material-icons">add_circle_outline</i>
+            <label class="user-label">Cadastro de Clientes</label>
+        </div>
+    </div>
+    <form #f="ngForm">
+        <div class="user-fields">
+            <div class="cardUserContainer">
+                <div class="cardUser">
+                    <div class="user-single-field">
+                        <mat-form-field>
+                            <input name="name" matInput placeholder="NOME:" [(ngModel)]="user.name" ng-minlength="2" required>
+                        </mat-form-field>
+                    </div>
+                    <div class="user-single-field">
+                        <mat-form-field class="mat-block" flex-gt-xs>
+                            <input name="address" matInput placeholder="Endereço:" [(ngModel)]="user.address" ng-minlength="2" required>
+                        </mat-form-field>
+                    </div>
+                    <div class="user-single-field">
+                        <mat-form-field class="mat-block" flex-gt-xs>
+                            <input name="district" matInput placeholder="Bairro:" [(ngModel)]="user.district" ng-minlength="2" required>
+                        </mat-form-field>
+                    </div>
+                    <div class="user-single-field">
+                        <mat-form-field class="mat-block" flex-gt-xs>
+                            <input name="city" matInput placeholder="Cidade:" [(ngModel)]="user.city" ng-minlength="2" required>
+                        </mat-form-field>
+                    </div>
+                    <div class="user-single-field">
+                        <mat-form-field class="mat-block" flex-gt-xs>
+                            <input name="zipcode" matInput placeholder="CEP:" [(ngModel)]="user.zipcode" ng-minlength="2" required>
+                        </mat-form-field>
+                    </div>
+                    <div class="user-single-field">
+                        <mat-form-field class="mat-block" flex-gt-xs>
+                            <input name="telephone" matInput placeholder="Telefone:" [(ngModel)]="user.telephone" ng-minlength="2" required>
+                        </mat-form-field>
+                    </div>
+                    <div class="user-single-field">
+                        <mat-form-field class="mat-block" flex-gt-xs>
+                            <input name="email" matInput placeholder="E-mail:" [(ngModel)]="user.email" ng-minlength="2" required>
+                        </mat-form-field>
+                    </div>
+                    <div class="user-single-field">
+                        <mat-form-field>
+                            <input matInput placeholder="Senha" name="password" [(ngModel)]="user.password" [type]="hide ? 'password' : 'text'">
+                            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                        </mat-form-field>
+                    </div>
+                    <div class="user-buttons">
+                        <button (click)="saveUser()" mat-button class="user-save-button">
+                            <label>SALVAR</label>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,19 @@
+@import "~src/assets/css/_variables";
+
+.card-wrapper {
+  .card-user-image {
+
+  }
+  .card-user-name {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .card-user-occupation {
+    font-style: italic;
+  }
+  .card-user-stars {
+    img {
+      width: 28px;
+    }
+  }
+}

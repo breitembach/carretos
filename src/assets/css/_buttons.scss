@@ -1,0 +1,8 @@
+@import "./src/assets/css/_variables";
+
+.btn-main {
+  background: $color-secondary;
+  color: white !important;
+  border: 1px solid $color-secondary;
+}
+

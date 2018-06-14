@@ -1,0 +1,32 @@
+@import "~src/assets/css/_variables";
+
+.footer-container {
+  background: $color-secondary;
+  padding: 25px;
+  .footer-description {
+    color:white;
+  }
+  .nav {
+    .nav-link {
+      color: #fff;
+      &:hover {
+        color: $color-main;
+        font-weight: bold;
+      }
+    }
+  }
+  .icon-social-network {
+    font-size: 51px;
+    color: #fff;
+    padding: 0px 10px;
+  }
+  .p-text {
+    color: #fff;
+  }
+}
+.f-cw {
+  padding: 10px 0;
+  color: white;
+  background-color: darken($color: $color-secondary, $amount: 3);
+}
+

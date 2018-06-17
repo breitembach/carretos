@@ -14,11 +14,16 @@
                             <input name="nameCompany" matInput placeholder="Nome da Empresa:" [(ngModel)]="freight.nameCompany" ng-minlength="2" required>
                         </mat-form-field>
                     </div>
-                    <div class="freight-single-field">
-                        <mat-form-field class="mat-block" flex-gt-xs>
-                            <input name="regionServed" matInput placeholder="Região atendida:" [(ngModel)]="freight.regionServed" ng-minlength="2" required>
+                    <div class="freight-single-field" flex-gt-xs>
+                        <mat-form-field>
+                            <mat-select placeholder="Região atendida: " [(ngModel)]="freight.regionServed" name="regionServed" required> 
+                                <mat-option *ngFor="let regionServed of regionServeds" [value]="regionServed.value">
+                                    {{regionServed.viewValue}}
+                                </mat-option>
+                            </mat-select>
                         </mat-form-field>
                     </div>
+
                     <div class="freight-single-field">
                         <mat-form-field class="mat-block" flex-gt-xs>
                             <input name="telephone" matInput placeholder="Telefone:" [(ngModel)]="freight.telephone" ng-minlength="2" required>
@@ -49,4 +54,5 @@
             </div>
         </div>
     </form>
+    <toaster-container [toasterconfig]="toasterconfig"></toaster-container>
 </div>

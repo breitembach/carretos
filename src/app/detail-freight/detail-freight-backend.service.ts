@@ -11,7 +11,7 @@ import 'rxjs/add/observable/throw';
 import 'rxjs/add/operator/do';
 
 @Injectable()
-export class ListFreightBackendService {
+export class DetailFreightBackendService {
     private _carretosApi: string;
 
     constructor(
@@ -28,14 +28,15 @@ export class ListFreightBackendService {
         return Observable.throw(err || 'backend server error');
     }
 
-    public getAllFreight = (): Observable<any> => {
-        const endpoint = `${this._carretosApi}freight`;
+
+    public getFreightById = (userId: UUID): Observable<any> => {
+        const endpoint = `${this._carretosApi}freight/${userId}`;
         return this.http.get(endpoint)
             .map(res => {
                 return res.json();
             })
-            .do(data => console.log('[ListFreightBackendService.getFreight] server data: ', data))
-            .catch(err => this._serverError(err, 'getFreight'));
+            .do(data => console.log('[getFreightById] server data: ', data))
+            .catch(err => this._serverError(err, 'getFreightById'));
     }
 
 }

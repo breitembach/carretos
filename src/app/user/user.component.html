@@ -16,6 +16,12 @@
                     </div>
                     <div class="user-single-field">
                         <mat-form-field class="mat-block" flex-gt-xs>
+                            <input name="zipcode" [textMask]="{mask:getMask('cep')}" matInput placeholder="CEP:" [(ngModel)]="user.zipcode" (ngModelChange)="addressField(user.zipcode)"
+                                ng-minlength="2" required>
+                        </mat-form-field>
+                    </div>
+                    <div class="user-single-field">
+                        <mat-form-field class="mat-block" flex-gt-xs>
                             <input name="address" matInput placeholder="Endereço:" [(ngModel)]="user.address" ng-minlength="2" required>
                         </mat-form-field>
                     </div>
@@ -31,14 +37,26 @@
                     </div>
                     <div class="user-single-field">
                         <mat-form-field class="mat-block" flex-gt-xs>
-                            <input name="zipcode" matInput placeholder="CEP:" [(ngModel)]="user.zipcode" ng-minlength="2" required>
+                            <input name="state" matInput placeholder="Estado:" [(ngModel)]="user.state" ng-minlength="2" required>
                         </mat-form-field>
                     </div>
                     <div class="user-single-field">
                         <mat-form-field class="mat-block" flex-gt-xs>
-                            <input name="telephone" matInput placeholder="Telefone:" [(ngModel)]="user.telephone" ng-minlength="2" required>
+                            <input name="telephone" [textMask]="{mask:getMask('phone')}" matInput placeholder="Telefone:" [(ngModel)]="user.telephone"
+                                ng-minlength="2" required>
                         </mat-form-field>
                     </div>
+
+                    <div class="user-single-field">
+                        <mat-form-field>
+                            <mat-select placeholder="Gênero" [(ngModel)]="user.gender" name="gender">
+                                <mat-option *ngFor="let gender of genders" [value]="gender.value">
+                                    {{gender.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+
                     <div class="user-single-field">
                         <mat-form-field class="mat-block" flex-gt-xs>
                             <input name="email" matInput placeholder="E-mail:" [(ngModel)]="user.email" ng-minlength="2" required>
@@ -64,4 +82,5 @@
             </div>
         </div>
     </form>
+    <toaster-container [toasterconfig]="toasterconfig"></toaster-container>
 </div>

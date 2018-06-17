@@ -1,18 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { ListFreightBackendService } from './list-freight-backend.service';
+import { FilterRegionBackendService } from './filter-region-backend.service';
 import { Freight } from '../shared/models/freight.model';
 import { Router } from '@angular/router';
 import { SharedVariablesService } from '../shared/services/shared-variavles.service';
 
 @Component({
-  selector: 'app-list-freight',
-  templateUrl: './list-freight.component.html',
-  styleUrls: ['./list-freight.component.scss']
+  selector: 'app-filter-region',
+  templateUrl: './filter-region.component.html',
+  styleUrls: ['./filter-region.component.scss']
 })
-export class ListFreightComponent implements OnInit {
+export class FilterRegionComponent implements OnInit {
 
   public freights: Freight;
   private regionFilter: string;
+  private region: string;
+  public error: boolean;
 
   filters = [
     { value: 'barreiro', viewValue: 'Região Barreiro' },
@@ -27,33 +29,54 @@ export class ListFreightComponent implements OnInit {
   ];
 
   constructor(
-    private _listFreightBackend: ListFreightBackendService,
+    private _filterRegionBackend: FilterRegionBackendService,
     private _router: Router,
     private _sharedVariablesService: SharedVariablesService,
 
   ) {
-    this._getAllFreight();
+    this.region = this._sharedVariablesService.getFilter();
+    this.error = false;
+    this._getFilterRegion();
   }
 
   ngOnInit() {
-
   }
 
-  private _getAllFreight = () => {
-    this._listFreightBackend.getAllFreight()
+  private _getFilterRegion = () => {
+    this._filterRegionBackend.getFilterRegion(this.region)
       .subscribe(
         freights => {
-          console.log(freights);
+          this.error = false;
           this.freights = freights;
+          this.freights = Array.of(freights);
         },
-        error => console.error('[ListFreightComponent._getAllFreight]: ' + error)
+        error => {
+          console.error('[FilterRegionComponent.getFilterRegion]: ' + error);
+          this.error = true;
+        }
       );
   }
 
-  public setFilterRegion = (region: string) => {
-      this._sharedVariablesService.setFilter(region);
+  public filterButton = (value: string) => {
+    if (this.region === value) {
+      return 'filter-button-active';
+    } else {
+      return 'filter-button';
+    }
+  }
 
-      this.redirect('/filter-region');
+  public setFilterRegion = (region: string) => {
+
+    if (region === this._sharedVariablesService.getFilter()) {
+      console.log('entrou no if');
+      this.region = 'undefined';
+      this._sharedVariablesService.setFilter('undefined');
+      this.redirect('/list-freight');
+    } else {
+      this.region = region;
+      this._sharedVariablesService.setFilter(region);
+      this._getFilterRegion();
+    }
   }
 
   public setFreight = (freightId: string) => {

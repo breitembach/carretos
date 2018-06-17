@@ -1,26 +1,23 @@
 <div class="container">
   <div class="row">
-    <div class="w-100 text-center">
-      <h1 class="title-main">Recentes adicionados</h1>
-    </div>
       <!-- CARD WRAPPER -->
-      <div class="col-md-4" *ngFor="let user of users">
-        <div class="card-wrapper shadow p-2 mb-5 rounded" (click)="setUser(user._id)">
+      <div class="col-md-4">
+        <div class="card-wrapper shadow p-2 mb-5 rounded" >
         <div class="row card-user-header">
           <div class="col-sm-3">
             <div class="card-user-image">
-                <img [src]="genderImg(user.gender)" class="img-fluid" alt="Pessoa">
+                <img src="assets/imgs/people.png" class="img-fluid" alt="Pessoa">
             </div>
           </div>
           <div class="col-sm-9">
             <div class="card-user-name">
-              {{user.name}}
+              {{freight.nameCompany}}
             </div>
             <div class="card-user-occupation">
-              Telefone: <b>{{user.telephone}}</b>
+              Telefone: <b>{{freight.telephone}}</b>
             </div>
             <div class="card-user-occupation">
-              E-mail: <b>{{user.email}}</b>
+              E-mail: <b>{{freight.email}}</b>
             </div>
             <div class="card-user-stars">
               <img src="assets/imgs/icons/star.png" alt="avaliações">
@@ -31,11 +28,14 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-12 regionServed">
-          <b>Endereço: {{user.address}} - {{user.district}} </b>
-        </div>
+          <div class="col-sm-12">
+            <img src="assets/imgs/Carreto2.png" class="img-fluid" alt="Carro">
+         </div>
+         <div class="col-sm-12 regionServed">
+           <b>Região atendida: {{freight.regionServed}}</b>
+         </div>
          <div class="col-sm-12">
-              {{user.description}}
+              {{freight.description}}
           </div>
           
         </div>

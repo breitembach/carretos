@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row">
+        <!-- CARD WRAPPER -->
+        <div class="col-md-4">
+          <div class="card-wrapper shadow p-2 mb-5 rounded">
+          <div class="row card-user-header">
+            <div class="col-sm-3">
+              <div class="card-user-image">
+                  <img src="assets/imgs/people.png" class="img-fluid" alt="Pessoa">
+              </div>
+            </div>
+            <div class="col-sm-9">
+              <div class="card-user-name">
+                {{user.name}}
+              </div>
+              <div class="card-user-occupation">
+                Telefone: <b>{{user.telephone}}</b>
+              </div>
+              <div class="card-user-occupation">
+                E-mail: <b>{{user.email}}</b>
+              </div>
+              <div class="card-user-stars">
+                <img src="assets/imgs/icons/star.png" alt="avaliações">
+                <img src="assets/imgs/icons/star.png" alt="avaliações">
+                <img src="assets/imgs/icons/star.png" alt="avaliações">
+                <img src="assets/imgs/icons/startWithoutColor.png" alt="avaliações">
+                <img src="assets/imgs/icons/startWithoutColor.png" alt="avaliações">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 regionServed">
+            <b>Endereço: {{user.address}} - {{user.district}} </b>
+          </div>
+           <div class="col-sm-12">
+                {{user.description}}
+            </div>
+            
+          </div>
+        </div>
+        <!-- CARD WRAPPER END -->
+      
+    </div>
+  </div>

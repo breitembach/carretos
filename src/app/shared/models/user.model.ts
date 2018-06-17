@@ -8,6 +8,8 @@ export interface User {
     zipcode?: string;
     telephone?: string;
     description?: string;
+    state?: string;
+    gender?: string;
 }
 
 export class UserObject implements User { }

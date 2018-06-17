@@ -1,16 +1,16 @@
 <div class="container">
   <div class="row">
-    <div class="filter-content horizontally-centralized">
+      <div class="filter-content horizontally-centralized">
         <label class="label-filter">Filtrar por: </label>
         <div class="filter-buttons">
-            <button *ngFor="let filter of filters" mat-button class="filter-button">
-                <label (click)="setFilterRegion(filter.value)">+ {{filter.viewValue}} </label>
+            <button *ngFor="let filter of filters" mat-button (click)="setFilterRegion(filter.value)" [ngClass]="filterButton(filter.value)">
+                <label>+ {{filter.viewValue}} </label>
             </button>
         </div>
     </div>
       <!-- CARD WRAPPER -->
       <div class="col-md-4" *ngFor="let freight of freights">
-        <div class="card-wrapper shadow p-2 mb-5 rounded" (click)="setFreight(freight._id)">
+        <div class="card-wrapper shadow p-2 mb-5 rounded" *ngIf="!error" (click)="setFreight(freight._id)">
         <div class="row card-user-header">
           <div class="col-sm-3">
             <div class="card-user-image">
@@ -39,14 +39,9 @@
           <div class="col-sm-12">
             <img src="assets/imgs/Carreto2.png" class="img-fluid" alt="Carro">
          </div>
-         <div class="region-buttons col-sm-12">
-            <button mat-button class="region-button">
-                <label>+ {{freight.regionServed}} </label>
-            </button>
-        </div>
-         <!-- <div class="col-sm-12 regionServed">
+         <div class="col-sm-12 regionServed">
            <b>Região atendida: {{freight.regionServed}}</b>
-         </div> -->
+         </div>
          <div class="col-sm-12">
               {{freight.description}}
           </div>
@@ -54,6 +49,8 @@
         </div>
       </div>
       <!-- CARD WRAPPER END -->
-    
+      <div class="w-100 text-center" *ngIf="error">
+          <h1 class="title-main">NÃO HÁ CARRETOS QUE ATENDAM NESSA REGIÃO</h1>
+      </div>
   </div>
 </div>

@@ -23,7 +23,10 @@
   .img-fluid{
     width: 50vh;
   }
- 
+  .regionServed{
+    text-align: center;
+    text-transform: uppercase;
+  }
 }
 
 .filter-buttons{
@@ -46,6 +49,16 @@
   margin-top: 5px; 
 }
 
+.filter-button-active {
+  width: 18%;
+  background-color: #f38221;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  margin-left: 10px;  
+  margin-top: 5px; 
+}
+
 .label-filter {
   margin-top: 23px; 
   position: absolute;
@@ -54,22 +67,5 @@
 }
 
 .filter-content{
-  width: 77vw;
-}
-
-.region-button {
-  width: 50%;
-  background-color: #212529;
-  border-radius: 10px;
-  color: white;
-  text-align: center;
-  margin-left: 10px;  
-  margin-top: 5px; 
-  text-transform: uppercase;
-}
-
-.region-buttons{
-  margin-top: 20px;
-  margin-bottom: 25px;
-  text-align: center;
+  width: 70vw;
 }

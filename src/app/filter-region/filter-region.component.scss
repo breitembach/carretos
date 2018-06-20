@@ -28,7 +28,9 @@
     text-transform: uppercase;
   }
 }
-
+.container {
+  min-height: 450px;
+}
 .filter-buttons{
   margin-top: 20px;
   margin-bottom: 25px;

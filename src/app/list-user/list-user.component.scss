@@ -1,6 +1,7 @@
 @import "~src/assets/css/_variables";
 
 .card-wrapper {
+  min-height: 240px;
   .card-user-header {
     margin-top: 10px;
     margin-bottom: 1rem;
@@ -22,5 +23,11 @@
   }
   .img-fluid{
     width: 50vh;
+  }
+  cursor: pointer;
+  &:hover {
+    .card-user-name {
+      color: $color-main;
+    }
   }
 }

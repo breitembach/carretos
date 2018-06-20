@@ -16,7 +16,11 @@ h3 {
   color: #fff;
 }
 a {
+  cursor: pointer;
   &:hover {
     color: #fff;
   }
+}
+button {
+  cursor: pointer;
 }

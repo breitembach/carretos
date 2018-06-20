@@ -1,13 +1,13 @@
 <div class="container">
   <div class="row">
     <div class="w-100 text-center">
-      <h1 class="title-main">Recentes adicionados</h1>
+      <h1 class="title-main p-3">Informações dos usuários</h1>
     </div>
       <!-- CARD WRAPPER -->
       <div class="col-md-4" *ngFor="let user of users">
         <div class="card-wrapper shadow p-2 mb-5 rounded" (click)="setUser(user._id)">
         <div class="row card-user-header">
-          <div class="col-sm-3">
+          <div class="col-sm-3 align-self-center">
             <div class="card-user-image">
                 <img [src]="genderImg(user.gender)" class="img-fluid" alt="Pessoa">
             </div>

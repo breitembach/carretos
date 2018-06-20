@@ -20,8 +20,10 @@
     }
   }
   .navbar-nav {
+    transition: 1s all ease;
     .dropdown-item.active, .dropdown-item:active {
-      background: $color-secondary;
+      background: lighten($color: $color-secondary, $amount: 10);
+      color: white;
       
     }
   }
@@ -33,3 +35,4 @@
     background-size: 20px;
   }
 }
+

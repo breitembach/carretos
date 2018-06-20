@@ -11,7 +11,7 @@ import { SharedVariablesService } from '../shared/services/shared-variavles.serv
 })
 export class FilterRegionComponent implements OnInit {
 
-  public freights: Freight;
+  public freights: any;
   private regionFilter: string;
   private region: string;
   public error: boolean;

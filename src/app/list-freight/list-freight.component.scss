@@ -23,6 +23,11 @@
   .img-fluid{
     width: 50vh;
   }
+  &:hover {
+    .mat-button {
+      background: $color-main;
+    }
+  }
  
 }
 
@@ -37,7 +42,7 @@
 } 
 
 .filter-button {
-  width: 18%;
+  width: 22%;
   background-color: #212529;
   border-radius: 10px;
   color: white;

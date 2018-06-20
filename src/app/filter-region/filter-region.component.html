@@ -1,10 +1,12 @@
 <div class="container">
   <div class="row">
-      <div class="filter-content horizontally-centralized">
+      <div class="filter-content horizontally-centralized ">
+        <div class="col-md-3">
         <label class="label-filter">Filtrar por: </label>
-        <div class="filter-buttons">
-            <button *ngFor="let filter of filters" mat-button (click)="setFilterRegion(filter.value)" [ngClass]="filterButton(filter.value)">
-                <label>+ {{filter.viewValue}} </label>
+        </div>
+        <div class="filter-buttons col-md-9">
+            <button *ngFor="let filter of filters" class="btn btn-secondary" (click)="setFilterRegion(filter.value)" [ngClass]="filterButton(filter.value)">
+                + {{filter.viewValue}}
             </button>
         </div>
     </div>
@@ -50,7 +52,9 @@
       </div>
       <!-- CARD WRAPPER END -->
       <div class="w-100 text-center" *ngIf="error">
-          <h1 class="title-main">NÃO HÁ CARRETOS QUE ATENDAM NESSA REGIÃO</h1>
+          <div class="alert alert-warning" role="alert">
+              NÃO HÁ CARRETOS QUE ATENDAM NESSA REGIÃO <i class="fas fa-exclamation-triangle"></i>
+            </div>
       </div>
   </div>
 </div>
